@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script src="lib/jquery-3.1.1.min.js"></script>
+    <script src="lib/lodash.min.js"></script>
+  	<script src="lib/d3.min.js"></script>
+    <script src="lib/plottable/plottable.js"></script>
+    <script src="clusterWheel.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="lib/plottable/plottable.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+
+   <div class="wheel">
+     <svg width="800" height="800" viewbox="-50 -50 100 100" id="wheel"></svg>
+   </div>
+
+   <div class="legend">
+      <div>
+        <div class="title">2016</div>
+        <div class="box taxes"></div>
+        <span>Average Property Taxes</span>
+      </div>
+      <div>
+        <div class="box cost"></div>
+        <span>Average Home Value</span>
+      </div>
+   </div>
+
+   <div class="wheel-label">*Drag wheel to rotate</div>
+
+  </body>
+</html>
+
+
