@@ -103,7 +103,6 @@ var clusterWheel = (function () {
         })
             .onDragEnd(function (startPoint, endPoint) {
             _this.wheelAngle = _this.wheelAngle + (_this.getAngle({ x: 50, y: 50 }, endPoint) - _this.getAngle({ x: 50, y: 50 }, startPoint));
-            //Pie.group.content().transition().ease("elastic").duration(3000).attr("transform", "rotate(" + Pie.wheelAngle + ")");
             if (_this.wheelAngle > 360) {
                 _this.wheelAngle = _this.wheelAngle - 360;
             }
@@ -111,7 +110,6 @@ var clusterWheel = (function () {
                 _this.wheelAngle = _this.wheelAngle + 360;
             }
             _this.group.content().attr("transform", "rotate(" + _this.wheelAngle + ")");
-            //console.log(this.wheelAngle);
         })
             .onDrag(function (startPoint, endPoint) {
             var newAngle = _this.wheelAngle + (_this.getAngle({ x: 50, y: 50 }, endPoint) - _this.getAngle({ x: 50, y: 50 }, startPoint));

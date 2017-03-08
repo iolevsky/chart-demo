@@ -32,7 +32,7 @@ class Pie {
         this.plot.outerRadius(accessor, this.scale);
 		
 		// pull out the data values being used for the pie chart into an array
-		var dataValues = _.map(dataset.data(), function(n) {
+		let dataValues = _.map(dataset.data(), function(n) {
 			return accessor(n);
 		});
 
@@ -84,7 +84,6 @@ class clusterWheel {
 	private dragInteraction;
 	private wheelAngle = 0;
 	private colorScale;
-	private legend;
 	
 	constructor(config) {
 		this.config = config;
@@ -133,7 +132,7 @@ class clusterWheel {
             this.group.content().attr("transform", "rotate(" + this.wheelAngle + ")");
         })
         .onDrag((startPoint, endPoint) => {
-            var newAngle = this.wheelAngle + (this.getAngle({x: 50, y: 50}, endPoint) - this.getAngle({x: 50, y: 50}, startPoint));
+            let newAngle = this.wheelAngle + (this.getAngle({x: 50, y: 50}, endPoint) - this.getAngle({x: 50, y: 50}, startPoint));
             this.group.content().attr("transform", "rotate(" + newAngle + ")");
         });
 	}
